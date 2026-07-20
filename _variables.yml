@@ -53,6 +53,10 @@ md-09:
   date: "2026-07-16"
   homework-due: "2026-07-23"
 
+bonus-github-iii:
+  titel: "Kollaboratives Arbeiten mit GitHub III"
+  date: "2026-07-21"
+
 md-10:
   titel: "Funktionen schreiben & Parameterisierung von Berichten"
   date: "2026-07-23"
