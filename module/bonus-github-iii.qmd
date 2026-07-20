@@ -55,8 +55,8 @@ Merge-Konflikte in der Praxis.
 
 -   Alle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht
     auf ein gemeinsames Repository.
--   Ein gemeinsamer Bericht (`bericht.qmd`): Titelblock und gemeinsame Quellenliste
-    oben, darunter vier Abschnitte, einer pro Person.
+-   Ein gemeinsamer Bericht (`bericht.qmd`): Titelblock oben, darunter vier
+    Abschnitte, einer pro Person.
 -   Vier Issues, eines pro Person, klar zugewiesen.
 -   Branch-Namenskonvention: `issue-N-<slug>`. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. `methoden`).
 -   Branch-Schutz auf `main`: ein Pull Request und mindestens ein Review sind
@@ -64,14 +64,18 @@ Merge-Konflikte in der Praxis.
 
 ## {{< fa clock >}} Ablauf (60 Min)
 
-| Zeit       | Schritt                                                                                                              |
-|:-----------|:---------------------------------------------------------------------------------------------------------------------|
-| 0–10 Min   | Einstieg, Organisation und Bericht zeigen, eigenes Issue finden                                                       |
-| 10–15 Min  | Branch erstellen (`issue-N-<slug>`)                                                                                   |
-| 15–35 Min  | "Quiet Mode": eigenen Abschnitt schreiben plus Eintrag in die gemeinsame Quellenliste  |
-| 35–45 Min  | Pull Request gegen `main` öffnen, eine andere Person als Reviewer markieren                                           |
-| 45–52 Min  | Review mit mindestens einem Kommentar                                                                                 |
-| 52–60 Min  | Live-Merge: ab dem zweiten Pull Request entsteht ein Merge-Konflikt in der gemeinsamen Liste, der gemeinsam aufgelöst wird |
+Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und
+"Ihr seid dran" (ihr macht es selbst mit einem Countdown).
+
+| Zeit       | Schritt                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------|
+| 0–10 Min   | Einstieg, Organisation und Bericht zeigen. Das eigene Issue suchen wir gemeinsam.                 |
+| 10–20 Min  | Branch erstellen (`issue-N-<slug>`): 5 Min ich zeige, 5 Min ihr seid dran                         |
+| 20–30 Min  | "Quiet Mode": eigenen Abschnitt im Bericht schreiben (10 Min, ihr seid dran)                      |
+| 30–40 Min  | Pull Request gegen `main` öffnen, eine andere Person als Reviewer markieren: 5 Min ich, 5 Min ihr |
+| 40–50 Min  | Review mit mindestens einem Kommentar: 5 Min ich, 5 Min ihr                                       |
+| 50–55 Min  | Live-Merge: ich merge die Pull Requests gemeinsam mit euch                                        |
+| 55–60 Min  | Abschliessende Fragerunde                                                                         |
 
 ## {{< fa users >}} Rollen
 
@@ -82,6 +86,6 @@ Merge-Konflikte in der Praxis.
 
 Reflexion in der Gruppe:
 
--   Was ist ein Merge-Konflikt?
--   Wann entsteht er?
+-   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
 -   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?

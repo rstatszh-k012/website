@@ -27,24 +27,23 @@ library(countdown)
 
 1.  Ihr könnt einen Branch erstellen, darauf committen und einen Pull Request gegen `main` öffnen.
 2.  Ihr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.
-3.  Ihr könnt erklären, wann ein Merge-Konflikt entsteht, und einen Konflikt in einer gemeinsam bearbeiteten Datei auflösen.
+3.  Ihr könnt erklären, wann ein Merge-Konflikt entstehen kann und was er bedeutet.
 
 ## Worum geht es heute?
 
 -   Ihr seid zu viert (ihr + ich) in einer GitHub-Organisation mit Schreibrecht auf ein Repository.
 -   Ihr arbeitet **gemeinsam** an einem Bericht (`bericht.qmd`).
--   In 60 Minuten erlebt ihr Branching, Pull Requests, Review und einen echten Merge-Konflikt.
+-   In 60 Minuten erlebt ihr Branching, Pull Requests, Review und Merge.
 
 ## Der gemeinsame Bericht {.small}
 
 `bericht.qmd` besteht aus:
 
 -   einem Titelblock oben,
--   einer **gemeinsamen Quellenliste** (die bearbeiten heute alle),
 -   vier Abschnitten, einer pro Person.
 
 ::: callout-note
-Der Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den Merge-Konflikt.
+Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und "Ihr seid dran" (ihr macht es selbst).
 :::
 
 ## Spielregeln
@@ -61,14 +60,17 @@ Der Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den M
 
 | Zeit       | Schritt                                                            |
 |:-----------|:------------------------------------------------------------------|
-| 0–10 Min   | Einstieg, Bericht zeigen, eigenes Issue finden                    |
-| 10–15 Min  | Branch erstellen                                                  |
-| 15–35 Min  | Quiet Mode: eigener Abschnitt + Eintrag in die Quellenliste       |
-| 35–45 Min  | Pull Request öffnen, Reviewer markieren                           |
-| 45–52 Min  | Review mit mindestens einem Kommentar                             |
-| 52–60 Min  | Live-Merge und Merge-Konflikt gemeinsam auflösen                  |
+| 0–10 Min   | Einstieg, Bericht zeigen, Issue gemeinsam suchen                  |
+| 10–20 Min  | Branch erstellen (ich zeige, dann ihr)                           |
+| 20–30 Min  | Quiet Mode: eigener Abschnitt (ihr seid dran)                    |
+| 30–40 Min  | Pull Request öffnen, Reviewer markieren (ich, dann ihr)          |
+| 40–50 Min  | Review mit mindestens einem Kommentar (ich, dann ihr)           |
+| 50–55 Min  | Live-Merge gemeinsam                                              |
+| 55–60 Min  | Fragerunde                                                        |
 
-## Schritt 1: Issue finden
+## Schritt 1: Issue finden {.small}
+
+Das machen wir **gemeinsam**.
 
 ::: task
 1.  Öffne das gemeinsame Repository auf GitHub.
@@ -77,7 +79,11 @@ Der Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den M
 4.  Lies, welchen Abschnitt du schreiben sollst.
 :::
 
-## Schritt 2: Branch erstellen
+## Schritt 2: Branch erstellen — Ich bin dran
+
+Ich zeige die Schritte einmal vor (5 Minuten).
+
+## Schritt 2: Branch erstellen — Ihr seid dran
 
 ::: task
 1.  Erstelle einen neuen Branch mit dem Namen `issue-N-<slug>`.
@@ -89,21 +95,24 @@ Der Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den M
 countdown(minutes = 5)
 ```
 
-## Schritt 3: Quiet Mode {.small}
+## Schritt 3: Quiet Mode — Ihr seid dran {.small}
 
 ::: task
 1.  Schreibe deinen eigenen Abschnitt in `bericht.qmd`.
-2.  Trage **eine Quelle** in die gemeinsame Quellenliste oben ein.
-3.  Committe deine Änderungen auf deinen Branch.
+2.  Committe deine Änderungen auf deinen Branch.
 :::
 
 Bitte in Stille arbeiten. Fragen sammeln wir danach.
 
 ```{r}
-countdown(minutes = 20)
+countdown(minutes = 10)
 ```
 
-## Schritt 4: Pull Request öffnen
+## Schritt 4: Pull Request öffnen — Ich bin dran
+
+Ich zeige die Schritte einmal vor (5 Minuten).
+
+## Schritt 4: Pull Request öffnen — Ihr seid dran
 
 ::: task
 1.  Öffne einen Pull Request von deinem Branch gegen `main`.
@@ -112,10 +121,14 @@ countdown(minutes = 20)
 :::
 
 ```{r}
-countdown(minutes = 10)
+countdown(minutes = 5)
 ```
 
-## Schritt 5: Review
+## Schritt 5: Review — Ich bin dran
+
+Ich zeige einmal, wie ein Review aussieht (5 Minuten).
+
+## Schritt 5: Review — Ihr seid dran
 
 ::: task
 1.  Öffne den Pull Request, der dir zum Review zugewiesen wurde.
@@ -125,15 +138,14 @@ countdown(minutes = 10)
 :::
 
 ```{r}
-countdown(minutes = 7)
+countdown(minutes = 5)
 ```
 
 ## Schritt 6: Live-Merge
 
--   Lars merged die Pull Requests der Reihe nach.
--   Der **erste** Pull Request merged sauber.
--   Ab dem **zweiten** entsteht ein Merge-Konflikt in der gemeinsamen Quellenliste.
--   Diesen Konflikt lösen wir gemeinsam auf.
+-   Ich merge die Pull Requests gemeinsam mit euch der Reihe nach.
+-   Wenn zwei Branches dieselbe Stelle geändert haben, **kann** dabei ein Merge-Konflikt entstehen.
+-   Falls das passiert, lösen wir ihn gemeinsam auf.
 
 # Merge-Konflikte {background-color="#4C326A"}
 
@@ -159,9 +171,15 @@ countdown(minutes = 7)
 
 ## Reflexion
 
--   Was ist ein Merge-Konflikt?
--   Wann entsteht er?
+-   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
 -   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?
+
+## Fragerunde
+
+[Was ist noch offen?]{.highlight-yellow}
+
+Zeit für eure Fragen (5 Minuten).
 
 ## Geschafft
 
