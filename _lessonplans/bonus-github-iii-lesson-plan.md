@@ -18,6 +18,7 @@
 - Alle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht auf ein gemeinsames Repository.
 - Ein gemeinsamer Bericht (`bericht.qmd`): Titelblock oben, darunter vier Abschnitte, einer pro Person.
 - Vier Issues, eines pro Person, klar zugewiesen.
+- Das Team-Repository (`team-lila`) wird zu Beginn gemeinsam von GitHub nach Posit Cloud geklont (New Project from Git Repository).
 - Branch-Namenskonvention: `issue-N-<slug>` (ein Slug ist ein einzelnes Wort, das das Issue beschreibt, zum Beispiel `methoden`).
 - Branch-Schutz auf `main`: ein Pull Request und mindestens eine Review sind nötig.
 
@@ -29,8 +30,9 @@
 
 ## Ablauf (60 Minuten)
 
-- **0 bis 10 Min - Einstieg**
+- **0 bis 10 Min - Einstieg und Repository klonen**
     - Organisation und Bericht zeigen.
+    - Wir sind dran (gemeinsam): auf GitHub das Team-Repository `team-lila` öffnen, Code-URL kopieren, in Posit Cloud New Project, New Project from Git Repository, URL einfügen, bis `bericht.qmd` sichtbar ist.
     - Das eigene Issue gemeinsam suchen (Reiter Issues, das zugewiesene Issue finden, den Abschnitt lesen).
 - **10 bis 20 Min - Branch erstellen**
     - 5 Min: Lars zeigt es vor.

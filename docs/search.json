@@ -155,7 +155,7 @@
     "href": "module/bonus-github-iii.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736974656d6170203e7d7d-aufbau",
     "title": "Bonusmodul",
     "section": " Aufbau",
-    "text": "Aufbau\n\nAlle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht auf ein gemeinsames Repository.\nEin gemeinsamer Bericht (bericht.qmd): Titelblock oben, darunter vier Abschnitte, einer pro Person.\nVier Issues, eines pro Person, klar zugewiesen.\nBranch-Namenskonvention: issue-N-&lt;slug&gt;. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. methoden).\nBranch-Schutz auf main: ein Pull Request und mindestens eine Review sind nötig.",
+    "text": "Aufbau\n\nAlle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht auf ein gemeinsames Repository.\nEin gemeinsamer Bericht (bericht.qmd): Titelblock oben, darunter vier Abschnitte, einer pro Person.\nVier Issues, eines pro Person, klar zugewiesen.\nDas Team-Repository (team-lila) wird zu Beginn gemeinsam von GitHub nach Posit Cloud geklont (New Project from Git Repository).\nBranch-Namenskonvention: issue-N-&lt;slug&gt;. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. methoden).\nBranch-Schutz auf main: ein Pull Request und mindestens eine Review sind nötig.",
     "crumbs": [
       "Bonus: GitHub III"
     ]
@@ -165,7 +165,7 @@
     "href": "module/bonus-github-iii.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636c6f636b203e7d7d-ablauf-60-min",
     "title": "Bonusmodul",
     "section": " Ablauf (60 Min)",
-    "text": "Ablauf (60 Min)\nWir wechseln bei jedem Schritt zwischen “Ich bin dran” (ich zeige es vor) und “Ihr seid dran” (ihr macht es selbst mit einem Countdown).\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Organisation und Bericht zeigen. Das eigene Issue suchen wir gemeinsam.\n\n\n10–20 Min\nBranch erstellen (issue-N-&lt;slug&gt;): 5 Min ich zeige, 5 Min ihr seid dran\n\n\n20–30 Min\n“Quiet Mode”: eigenen Abschnitt im Bericht schreiben (10 Min, ihr seid dran)\n\n\n30–40 Min\nPull Request gegen main öffnen, eine andere Person als Reviewer markieren: 5 Min ich, 5 Min ihr\n\n\n40–50 Min\nReview mit mindestens einem Kommentar: 5 Min ich, 5 Min ihr\n\n\n50–55 Min\nLive-Merge: ich merge die Pull Requests gemeinsam mit euch\n\n\n55–60 Min\nAbschliessende Fragerunde",
+    "text": "Ablauf (60 Min)\nWir wechseln bei jedem Schritt zwischen “Ich bin dran” (ich zeige es vor) und “Ihr seid dran” (ihr macht es selbst mit einem Countdown).\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg und Bericht zeigen. Das Team-Repository team-lila gemeinsam von GitHub nach Posit Cloud klonen. Das eigene Issue suchen wir gemeinsam.\n\n\n10–20 Min\nBranch erstellen (issue-N-&lt;slug&gt;): 5 Min ich zeige, 5 Min ihr seid dran\n\n\n20–30 Min\n“Quiet Mode”: eigenen Abschnitt im Bericht schreiben (10 Min, ihr seid dran)\n\n\n30–40 Min\nPull Request gegen main öffnen, eine andere Person als Reviewer markieren: 5 Min ich, 5 Min ihr\n\n\n40–50 Min\nReview mit mindestens einem Kommentar: 5 Min ich, 5 Min ihr\n\n\n50–55 Min\nLive-Merge: ich merge die Pull Requests gemeinsam mit euch\n\n\n55–60 Min\nAbschliessende Fragerunde",
     "crumbs": [
       "Bonus: GitHub III"
     ]
@@ -3017,70 +3017,77 @@
     "href": "folien/bonus-github-iii.html#ablauf-60-minuten",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Ablauf (60 Minuten)",
-    "text": "Ablauf (60 Minuten)\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Bericht zeigen, Issue gemeinsam suchen\n\n\n10–20 Min\nBranch erstellen (ich zeige, dann ihr)\n\n\n20–30 Min\nQuiet Mode: eigener Abschnitt (ihr seid dran)\n\n\n30–40 Min\nPull Request öffnen, Reviewer markieren (ich, dann ihr)\n\n\n40–50 Min\nReview mit mindestens einem Kommentar (ich, dann ihr)\n\n\n50–55 Min\nLive-Merge gemeinsam\n\n\n55–60 Min\nFragerunde"
+    "text": "Ablauf (60 Minuten)\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Bericht zeigen, Repository klonen, Issue gemeinsam suchen\n\n\n10–20 Min\nBranch erstellen (ich zeige, dann ihr)\n\n\n20–30 Min\nQuiet Mode: eigener Abschnitt (ihr seid dran)\n\n\n30–40 Min\nPull Request öffnen, Reviewer markieren (ich, dann ihr)\n\n\n40–50 Min\nReview mit mindestens einem Kommentar (ich, dann ihr)\n\n\n50–55 Min\nLive-Merge gemeinsam\n\n\n55–60 Min\nFragerunde"
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-1-issue-finden",
-    "href": "folien/bonus-github-iii.html#schritt-1-issue-finden",
+    "objectID": "folien/bonus-github-iii.html#schritt-1-repository-klonen-wir-sind-dran",
+    "href": "folien/bonus-github-iii.html#schritt-1-repository-klonen-wir-sind-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 1: Issue finden",
-    "text": "Schritt 1: Issue finden\nDas machen wir gemeinsam.\n\n\nÖffne das gemeinsame Repository auf GitHub.\nGehe zum Reiter Issues.\nFinde das Issue, das dir zugewiesen ist.\nLies, welchen Abschnitt du schreiben sollst."
+    "section": "Schritt 1: Repository klonen — Wir sind dran",
+    "text": "Schritt 1: Repository klonen — Wir sind dran\nWir starten auf GitHub und holen das Team-Repository gemeinsam nach Posit Cloud.\n\n\nÖffne auf GitHub das Team-Repository team-lila.\nKlicke auf Code und kopiere die HTTPS-URL.\nÖffne den Kursarbeitsbereich auf posit.cloud.\nKlicke auf New Project und dann auf New Project from Git Repository.\nFüge die URL ein und bestätige, bis du bericht.qmd siehst."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ich-bin-dran",
-    "href": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ich-bin-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-2-issue-finden",
+    "href": "folien/bonus-github-iii.html#schritt-2-issue-finden",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 2: Branch erstellen — Ich bin dran",
-    "text": "Schritt 2: Branch erstellen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
+    "section": "Schritt 2: Issue finden",
+    "text": "Schritt 2: Issue finden\nDas machen wir gemeinsam.\n\n\nÖffne das gemeinsame Repository auf GitHub.\nGehe zum Reiter Issues.\nFinde das Issue, das dir zugewiesen ist.\nLies, welchen Abschnitt du schreiben sollst."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ihr-seid-dran",
-    "href": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ihr-seid-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-3-branch-erstellen-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-3-branch-erstellen-ich-bin-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 2: Branch erstellen — Ihr seid dran",
-    "text": "Schritt 2: Branch erstellen — Ihr seid dran\n\n\nErstelle eine neue Branch mit dem Namen issue-N-&lt;slug&gt;.\nN ist die Nummer deines Issues, &lt;slug&gt; ein einzelnes Wort, das das Issue beschreibt.\nWechsle auf deine Branch (lokal oder auf posit.cloud)."
+    "section": "Schritt 3: Branch erstellen — Ich bin dran",
+    "text": "Schritt 3: Branch erstellen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-3-quiet-mode-ihr-seid-dran",
-    "href": "folien/bonus-github-iii.html#schritt-3-quiet-mode-ihr-seid-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-3-branch-erstellen-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-3-branch-erstellen-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 3: Quiet Mode — Ihr seid dran",
-    "text": "Schritt 3: Quiet Mode — Ihr seid dran\n\n\nSchreibe deinen eigenen Abschnitt in bericht.qmd.\nCommitte deine Änderungen auf deine Branch."
+    "section": "Schritt 3: Branch erstellen — Ihr seid dran",
+    "text": "Schritt 3: Branch erstellen — Ihr seid dran\n\n\nErstelle eine neue Branch mit dem Namen issue-N-&lt;slug&gt;.\nN ist die Nummer deines Issues, &lt;slug&gt; ein einzelnes Wort, das das Issue beschreibt.\nWechsle auf deine Branch (lokal oder auf posit.cloud)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ich-bin-dran",
-    "href": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ich-bin-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-4-quiet-mode-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-4-quiet-mode-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 4: Pull Request öffnen — Ich bin dran",
-    "text": "Schritt 4: Pull Request öffnen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
+    "section": "Schritt 4: Quiet Mode — Ihr seid dran",
+    "text": "Schritt 4: Quiet Mode — Ihr seid dran\n\n\nSchreibe deinen eigenen Abschnitt in bericht.qmd.\nCommitte deine Änderungen auf deine Branch."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ihr-seid-dran",
-    "href": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ihr-seid-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-5-pull-request-öffnen-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-5-pull-request-öffnen-ich-bin-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 4: Pull Request öffnen — Ihr seid dran",
-    "text": "Schritt 4: Pull Request öffnen — Ihr seid dran\n\n\nÖffne einen Pull Request von deinem Branch gegen main.\nMarkiere eine andere Person als Reviewer.\nVerlinke dein Issue im Pull Request (z. B. Closes #N)."
+    "section": "Schritt 5: Pull Request öffnen — Ich bin dran",
+    "text": "Schritt 5: Pull Request öffnen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-5-review-ich-bin-dran",
-    "href": "folien/bonus-github-iii.html#schritt-5-review-ich-bin-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-5-pull-request-öffnen-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-5-pull-request-öffnen-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 5: Review — Ich bin dran",
-    "text": "Schritt 5: Review — Ich bin dran\nIch zeige einmal, wie eine Review aussieht (5 Minuten)."
+    "section": "Schritt 5: Pull Request öffnen — Ihr seid dran",
+    "text": "Schritt 5: Pull Request öffnen — Ihr seid dran\n\n\nÖffne einen Pull Request von deinem Branch gegen main.\nMarkiere eine andere Person als Reviewer.\nVerlinke dein Issue im Pull Request (z. B. Closes #N)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-5-review-ihr-seid-dran",
-    "href": "folien/bonus-github-iii.html#schritt-5-review-ihr-seid-dran",
+    "objectID": "folien/bonus-github-iii.html#schritt-6-review-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-6-review-ich-bin-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 5: Review — Ihr seid dran",
-    "text": "Schritt 5: Review — Ihr seid dran\n\n\nÖffne den Pull Request, der dir zur Review zugewiesen wurde.\nLies die Änderungen im Reiter Files changed.\nHinterlasse mindestens einen Kommentar.\nGib die Review frei (Approve oder Kommentar)."
+    "section": "Schritt 6: Review — Ich bin dran",
+    "text": "Schritt 6: Review — Ich bin dran\nIch zeige einmal, wie eine Review aussieht (5 Minuten)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-6-live-merge",
-    "href": "folien/bonus-github-iii.html#schritt-6-live-merge",
+    "objectID": "folien/bonus-github-iii.html#schritt-6-review-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-6-review-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 6: Live-Merge",
-    "text": "Schritt 6: Live-Merge\n\nIch merge die Pull Requests gemeinsam mit euch der Reihe nach.\nWenn zwei Branches dieselbe Stelle geändert haben, kann dabei ein Merge-Konflikt entstehen.\nFalls das passiert, lösen wir ihn gemeinsam auf."
+    "section": "Schritt 6: Review — Ihr seid dran",
+    "text": "Schritt 6: Review — Ihr seid dran\n\n\nÖffne den Pull Request, der dir zur Review zugewiesen wurde.\nLies die Änderungen im Reiter Files changed.\nHinterlasse mindestens einen Kommentar.\nGib die Review frei (Approve oder Kommentar)."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#schritt-7-live-merge",
+    "href": "folien/bonus-github-iii.html#schritt-7-live-merge",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Schritt 7: Live-Merge",
+    "text": "Schritt 7: Live-Merge\n\nIch merge die Pull Requests gemeinsam mit euch der Reihe nach.\nWenn zwei Branches dieselbe Stelle geändert haben, kann dabei ein Merge-Konflikt entstehen.\nFalls das passiert, lösen wir ihn gemeinsam auf."
   },
   {
     "objectID": "folien/bonus-github-iii.html#was-ist-ein-merge-konflikt",

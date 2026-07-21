@@ -60,7 +60,7 @@ Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und "I
 
 | Zeit       | Schritt                                                            |
 |:-----------|:------------------------------------------------------------------|
-| 0–10 Min   | Einstieg, Bericht zeigen, Issue gemeinsam suchen                  |
+| 0–10 Min   | Einstieg, Bericht zeigen, Repository klonen, Issue gemeinsam suchen |
 | 10–20 Min  | Branch erstellen (ich zeige, dann ihr)                           |
 | 20–30 Min  | Quiet Mode: eigener Abschnitt (ihr seid dran)                    |
 | 30–40 Min  | Pull Request öffnen, Reviewer markieren (ich, dann ihr)          |
@@ -68,7 +68,19 @@ Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und "I
 | 50–55 Min  | Live-Merge gemeinsam                                              |
 | 55–60 Min  | Fragerunde                                                        |
 
-## Schritt 1: Issue finden {.small}
+## Schritt 1: Repository klonen — Wir sind dran {.small}
+
+Wir starten auf GitHub und holen das Team-Repository gemeinsam nach Posit Cloud.
+
+::: task
+1.  Öffne auf GitHub das Team-Repository `team-lila`.
+2.  Klicke auf [Code]{.highlight-yellow} und kopiere die HTTPS-URL.
+3.  Öffne den Kursarbeitsbereich auf [posit.cloud]({{< var course.posit-cloud-signup >}}).
+4.  Klicke auf [New Project]{.highlight-yellow} und dann auf **New Project from Git Repository**.
+5.  Füge die URL ein und bestätige, bis du `bericht.qmd` siehst.
+:::
+
+## Schritt 2: Issue finden {.small}
 
 Das machen wir **gemeinsam**.
 
@@ -79,11 +91,11 @@ Das machen wir **gemeinsam**.
 4.  Lies, welchen Abschnitt du schreiben sollst.
 :::
 
-## Schritt 2: Branch erstellen — Ich bin dran
+## Schritt 3: Branch erstellen — Ich bin dran
 
 Ich zeige die Schritte einmal vor (5 Minuten).
 
-## Schritt 2: Branch erstellen — Ihr seid dran
+## Schritt 3: Branch erstellen — Ihr seid dran
 
 ::: task
 1.  Erstelle eine neue Branch mit dem Namen `issue-N-<slug>`.
@@ -95,7 +107,7 @@ Ich zeige die Schritte einmal vor (5 Minuten).
 countdown(minutes = 5)
 ```
 
-## Schritt 3: Quiet Mode — Ihr seid dran {.small}
+## Schritt 4: Quiet Mode — Ihr seid dran {.small}
 
 ::: task
 1.  Schreibe deinen eigenen Abschnitt in `bericht.qmd`.
@@ -106,11 +118,11 @@ countdown(minutes = 5)
 countdown(minutes = 10)
 ```
 
-## Schritt 4: Pull Request öffnen — Ich bin dran
+## Schritt 5: Pull Request öffnen — Ich bin dran
 
 Ich zeige die Schritte einmal vor (5 Minuten).
 
-## Schritt 4: Pull Request öffnen — Ihr seid dran
+## Schritt 5: Pull Request öffnen — Ihr seid dran
 
 ::: task
 1.  Öffne einen Pull Request von deinem Branch gegen `main`.
@@ -122,11 +134,11 @@ Ich zeige die Schritte einmal vor (5 Minuten).
 countdown(minutes = 5)
 ```
 
-## Schritt 5: Review — Ich bin dran
+## Schritt 6: Review — Ich bin dran
 
 Ich zeige einmal, wie eine Review aussieht (5 Minuten).
 
-## Schritt 5: Review — Ihr seid dran
+## Schritt 6: Review — Ihr seid dran
 
 ::: task
 1.  Öffne den Pull Request, der dir zur Review zugewiesen wurde.
@@ -139,7 +151,7 @@ Ich zeige einmal, wie eine Review aussieht (5 Minuten).
 countdown(minutes = 5)
 ```
 
-## Schritt 6: Live-Merge
+## Schritt 7: Live-Merge
 
 -   Ich merge die Pull Requests gemeinsam mit euch der Reihe nach.
 -   Wenn zwei Branches dieselbe Stelle geändert haben, **kann** dabei ein Merge-Konflikt entstehen.
