@@ -59,7 +59,7 @@ Merge-Konflikte in der Praxis.
     Abschnitte, einer pro Person.
 -   Vier Issues, eines pro Person, klar zugewiesen.
 -   Branch-Namenskonvention: `issue-N-<slug>`. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. `methoden`).
--   Branch-Schutz auf `main`: ein Pull Request und mindestens ein Review sind
+-   Branch-Schutz auf `main`: ein Pull Request und mindestens eine Review sind
     nötig.
 
 ## {{< fa clock >}} Ablauf (60 Min)
@@ -87,5 +87,5 @@ Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und
 Reflexion in der Gruppe:
 
 -   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
--   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wie hilft eine Review dabei, Probleme früh zu erkennen?
 -   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?

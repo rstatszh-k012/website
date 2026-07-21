@@ -155,7 +155,7 @@
     "href": "module/bonus-github-iii.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120736974656d6170203e7d7d-aufbau",
     "title": "Bonusmodul",
     "section": " Aufbau",
-    "text": "Aufbau\n\nAlle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht auf ein gemeinsames Repository.\nEin gemeinsamer Bericht (bericht.qmd): Titelblock und gemeinsame Quellenliste oben, darunter vier Abschnitte, einer pro Person.\nVier Issues, eines pro Person, klar zugewiesen.\nBranch-Namenskonvention: issue-N-&lt;slug&gt;. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. methoden).\nBranch-Schutz auf main: ein Pull Request und mindestens ein Review sind nötig.",
+    "text": "Aufbau\n\nAlle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht auf ein gemeinsames Repository.\nEin gemeinsamer Bericht (bericht.qmd): Titelblock oben, darunter vier Abschnitte, einer pro Person.\nVier Issues, eines pro Person, klar zugewiesen.\nBranch-Namenskonvention: issue-N-&lt;slug&gt;. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. methoden).\nBranch-Schutz auf main: ein Pull Request und mindestens eine Review sind nötig.",
     "crumbs": [
       "Bonus: GitHub III"
     ]
@@ -165,7 +165,7 @@
     "href": "module/bonus-github-iii.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636c6f636b203e7d7d-ablauf-60-min",
     "title": "Bonusmodul",
     "section": " Ablauf (60 Min)",
-    "text": "Ablauf (60 Min)\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Organisation und Bericht zeigen, eigenes Issue finden\n\n\n10–15 Min\nBranch erstellen (issue-N-&lt;slug&gt;)\n\n\n15–35 Min\n“Quiet Mode”: eigenen Abschnitt schreiben plus Eintrag in die gemeinsame Quellenliste\n\n\n35–45 Min\nPull Request gegen main öffnen, eine andere Person als Reviewer markieren\n\n\n45–52 Min\nReview mit mindestens einem Kommentar\n\n\n52–60 Min\nLive-Merge: ab dem zweiten Pull Request entsteht ein Merge-Konflikt in der gemeinsamen Liste, der gemeinsam aufgelöst wird",
+    "text": "Ablauf (60 Min)\nWir wechseln bei jedem Schritt zwischen “Ich bin dran” (ich zeige es vor) und “Ihr seid dran” (ihr macht es selbst mit einem Countdown).\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Organisation und Bericht zeigen. Das eigene Issue suchen wir gemeinsam.\n\n\n10–20 Min\nBranch erstellen (issue-N-&lt;slug&gt;): 5 Min ich zeige, 5 Min ihr seid dran\n\n\n20–30 Min\n“Quiet Mode”: eigenen Abschnitt im Bericht schreiben (10 Min, ihr seid dran)\n\n\n30–40 Min\nPull Request gegen main öffnen, eine andere Person als Reviewer markieren: 5 Min ich, 5 Min ihr\n\n\n40–50 Min\nReview mit mindestens einem Kommentar: 5 Min ich, 5 Min ihr\n\n\n50–55 Min\nLive-Merge: ich merge die Pull Requests gemeinsam mit euch\n\n\n55–60 Min\nAbschliessende Fragerunde",
     "crumbs": [
       "Bonus: GitHub III"
     ]
@@ -185,7 +185,7 @@
     "href": "module/bonus-github-iii.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636f6d6d656e7473203e7d7d-nachbereitung",
     "title": "Bonusmodul",
     "section": " Nachbereitung",
-    "text": "Nachbereitung\nReflexion in der Gruppe:\n\nWas ist ein Merge-Konflikt?\nWann entsteht er?\nWie hilft ein Review dabei, Probleme früh zu erkennen?",
+    "text": "Nachbereitung\nReflexion in der Gruppe:\n\nWozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?\nWie hilft eine Review dabei, Probleme früh zu erkennen?\nWann kann ein Merge-Konflikt entstehen, und was bedeutet er?",
     "crumbs": [
       "Bonus: GitHub III"
     ]
@@ -2989,77 +2989,98 @@
     "href": "folien/bonus-github-iii.html#lernziele",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Lernziele",
-    "text": "Lernziele\n\nIhr könnt einen Branch erstellen, darauf committen und einen Pull Request gegen main öffnen.\nIhr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.\nIhr könnt erklären, wann ein Merge-Konflikt entsteht, und einen Konflikt in einer gemeinsam bearbeiteten Datei auflösen."
+    "text": "Lernziele\n\nIhr könnt eine Branch erstellen, darauf committen und einen Pull Request gegen main öffnen.\nIhr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.\nIhr könnt erklären, wann ein Merge-Konflikt entsteht, und einen Konflikt in einer gemeinsam bearbeiteten Datei auflösen."
   },
   {
     "objectID": "folien/bonus-github-iii.html#worum-geht-es-heute",
     "href": "folien/bonus-github-iii.html#worum-geht-es-heute",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Worum geht es heute?",
-    "text": "Worum geht es heute?\n\nIhr seid zu viert (ihr + ich) in einer GitHub-Organisation mit Schreibrecht auf ein Repository.\nIhr arbeitet gemeinsam an einem Bericht (bericht.qmd).\nIn 60 Minuten erlebt ihr Branching, Pull Requests, Review und einen echten Merge-Konflikt."
+    "text": "Worum geht es heute?\n\nIhr seid zu viert (ihr + ich) in einer GitHub-Organisation mit Schreibrecht auf ein Repository.\nIhr arbeitet gemeinsam an einem Bericht (bericht.qmd).\nIn 60 Minuten erlebt ihr Branching, Pull Requests, Review und Merge."
   },
   {
     "objectID": "folien/bonus-github-iii.html#der-gemeinsame-bericht",
     "href": "folien/bonus-github-iii.html#der-gemeinsame-bericht",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Der gemeinsame Bericht",
-    "text": "Der gemeinsame Bericht\nbericht.qmd besteht aus:\n\neinem Titelblock oben,\neiner gemeinsamen Quellenliste (die bearbeiten heute alle),\nvier Abschnitten, einer pro Person.\n\n\n\n\n\n\n\nNote\n\n\nDer Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den Merge-Konflikt."
+    "text": "Der gemeinsame Bericht\nbericht.qmd besteht aus:\n\neinem Titelblock oben,\nvier Abschnitten, einer pro Person.\n\n\n\n\n\n\n\nNote\n\n\nWir wechseln bei jedem Schritt zwischen “Ich bin dran” (ich zeige es vor) und “Ihr seid dran” (ihr macht es selbst)."
   },
   {
     "objectID": "folien/bonus-github-iii.html#spielregeln",
     "href": "folien/bonus-github-iii.html#spielregeln",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Spielregeln",
-    "text": "Spielregeln\n\nVier Issues, eines pro Person, klar zugewiesen.\nBranch-Namen: issue-N-&lt;slug&gt; (z. B. issue-3-methoden). Ein Slug ist ein einzelnes Wort, das das Issue beschreibt.\nmain ist geschützt: Merge nur über einen Pull Request mit mindestens einem Review.\nJeder Pull Request wird von einer anderen Person reviewt, nie der eigene.\nLars ist Admin und merged die Pull Requests."
+    "text": "Spielregeln\n\nVier Issues, eines pro Person, klar zugewiesen.\nBranch-Namen: issue-N-&lt;slug&gt; (z. B. issue-3-methoden). Ein Slug ist ein einzelnes Wort, das das Issue beschreibt.\nmain ist geschützt: Merge nur über einen Pull Request mit mindestens einer Review.\nJeder Pull Request wird von einer anderen Person reviewt, nie der eigene.\nLars ist Admin und merged die Pull Requests."
   },
   {
     "objectID": "folien/bonus-github-iii.html#ablauf-60-minuten",
     "href": "folien/bonus-github-iii.html#ablauf-60-minuten",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Ablauf (60 Minuten)",
-    "text": "Ablauf (60 Minuten)\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Bericht zeigen, eigenes Issue finden\n\n\n10–15 Min\nBranch erstellen\n\n\n15–35 Min\nQuiet Mode: eigener Abschnitt + Eintrag in die Quellenliste\n\n\n35–45 Min\nPull Request öffnen, Reviewer markieren\n\n\n45–52 Min\nReview mit mindestens einem Kommentar\n\n\n52–60 Min\nLive-Merge und Merge-Konflikt gemeinsam auflösen"
+    "text": "Ablauf (60 Minuten)\n\n\n\n\n\n\n\nZeit\nSchritt\n\n\n\n\n0–10 Min\nEinstieg, Bericht zeigen, Issue gemeinsam suchen\n\n\n10–20 Min\nBranch erstellen (ich zeige, dann ihr)\n\n\n20–30 Min\nQuiet Mode: eigener Abschnitt (ihr seid dran)\n\n\n30–40 Min\nPull Request öffnen, Reviewer markieren (ich, dann ihr)\n\n\n40–50 Min\nReview mit mindestens einem Kommentar (ich, dann ihr)\n\n\n50–55 Min\nLive-Merge gemeinsam\n\n\n55–60 Min\nFragerunde"
   },
   {
     "objectID": "folien/bonus-github-iii.html#schritt-1-issue-finden",
     "href": "folien/bonus-github-iii.html#schritt-1-issue-finden",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Schritt 1: Issue finden",
-    "text": "Schritt 1: Issue finden\n\n\nÖffne das gemeinsame Repository auf GitHub.\nGehe zum Reiter Issues.\nFinde das Issue, das dir zugewiesen ist.\nLies, welchen Abschnitt du schreiben sollst."
+    "text": "Schritt 1: Issue finden\nDas machen wir gemeinsam.\n\n\nÖffne das gemeinsame Repository auf GitHub.\nGehe zum Reiter Issues.\nFinde das Issue, das dir zugewiesen ist.\nLies, welchen Abschnitt du schreiben sollst."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-2-branch-erstellen",
-    "href": "folien/bonus-github-iii.html#schritt-2-branch-erstellen",
+    "objectID": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ich-bin-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 2: Branch erstellen",
-    "text": "Schritt 2: Branch erstellen\n\n\nErstelle einen neuen Branch mit dem Namen issue-N-&lt;slug&gt;.\nN ist die Nummer deines Issues, &lt;slug&gt; ein einzelnes Wort, das das Issue beschreibt.\nWechsle auf deinen Branch (lokal oder auf posit.cloud)."
+    "section": "Schritt 2: Branch erstellen — Ich bin dran",
+    "text": "Schritt 2: Branch erstellen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-3-quiet-mode",
-    "href": "folien/bonus-github-iii.html#schritt-3-quiet-mode",
+    "objectID": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-2-branch-erstellen-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 3: Quiet Mode",
-    "text": "Schritt 3: Quiet Mode\n\n\nSchreibe deinen eigenen Abschnitt in bericht.qmd.\nTrage eine Quelle in die gemeinsame Quellenliste oben ein.\nCommitte deine Änderungen auf deinen Branch.\n\n\nBitte in Stille arbeiten. Fragen sammeln wir danach."
+    "section": "Schritt 2: Branch erstellen — Ihr seid dran",
+    "text": "Schritt 2: Branch erstellen — Ihr seid dran\n\n\nErstelle eine neue Branch mit dem Namen issue-N-&lt;slug&gt;.\nN ist die Nummer deines Issues, &lt;slug&gt; ein einzelnes Wort, das das Issue beschreibt.\nWechsle auf deine Branch (lokal oder auf posit.cloud)."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen",
-    "href": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen",
+    "objectID": "folien/bonus-github-iii.html#schritt-3-quiet-mode-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-3-quiet-mode-ihr-seid-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 4: Pull Request öffnen",
-    "text": "Schritt 4: Pull Request öffnen\n\n\nÖffne einen Pull Request von deinem Branch gegen main.\nMarkiere eine andere Person als Reviewer.\nVerlinke dein Issue im Pull Request (z. B. Closes #N)."
+    "section": "Schritt 3: Quiet Mode — Ihr seid dran",
+    "text": "Schritt 3: Quiet Mode — Ihr seid dran\n\n\nSchreibe deinen eigenen Abschnitt in bericht.qmd.\nCommitte deine Änderungen auf deine Branch."
   },
   {
-    "objectID": "folien/bonus-github-iii.html#schritt-5-review",
-    "href": "folien/bonus-github-iii.html#schritt-5-review",
+    "objectID": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ich-bin-dran",
     "title": "Kollaboratives Arbeiten mit GitHub III",
-    "section": "Schritt 5: Review",
-    "text": "Schritt 5: Review\n\n\nÖffne den Pull Request, der dir zum Review zugewiesen wurde.\nLies die Änderungen im Reiter Files changed.\nHinterlasse mindestens einen Kommentar.\nGib das Review frei (Approve oder Kommentar)."
+    "section": "Schritt 4: Pull Request öffnen — Ich bin dran",
+    "text": "Schritt 4: Pull Request öffnen — Ich bin dran\nIch zeige die Schritte einmal vor (5 Minuten)."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-4-pull-request-öffnen-ihr-seid-dran",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Schritt 4: Pull Request öffnen — Ihr seid dran",
+    "text": "Schritt 4: Pull Request öffnen — Ihr seid dran\n\n\nÖffne einen Pull Request von deinem Branch gegen main.\nMarkiere eine andere Person als Reviewer.\nVerlinke dein Issue im Pull Request (z. B. Closes #N)."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#schritt-5-review-ich-bin-dran",
+    "href": "folien/bonus-github-iii.html#schritt-5-review-ich-bin-dran",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Schritt 5: Review — Ich bin dran",
+    "text": "Schritt 5: Review — Ich bin dran\nIch zeige einmal, wie eine Review aussieht (5 Minuten)."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#schritt-5-review-ihr-seid-dran",
+    "href": "folien/bonus-github-iii.html#schritt-5-review-ihr-seid-dran",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Schritt 5: Review — Ihr seid dran",
+    "text": "Schritt 5: Review — Ihr seid dran\n\n\nÖffne den Pull Request, der dir zur Review zugewiesen wurde.\nLies die Änderungen im Reiter Files changed.\nHinterlasse mindestens einen Kommentar.\nGib die Review frei (Approve oder Kommentar)."
   },
   {
     "objectID": "folien/bonus-github-iii.html#schritt-6-live-merge",
     "href": "folien/bonus-github-iii.html#schritt-6-live-merge",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Schritt 6: Live-Merge",
-    "text": "Schritt 6: Live-Merge\n\nLars merged die Pull Requests der Reihe nach.\nDer erste Pull Request merged sauber.\nAb dem zweiten entsteht ein Merge-Konflikt in der gemeinsamen Quellenliste.\nDiesen Konflikt lösen wir gemeinsam auf."
+    "text": "Schritt 6: Live-Merge\n\nIch merge die Pull Requests gemeinsam mit euch der Reihe nach.\nWenn zwei Branches dieselbe Stelle geändert haben, kann dabei ein Merge-Konflikt entstehen.\nFalls das passiert, lösen wir ihn gemeinsam auf."
   },
   {
     "objectID": "folien/bonus-github-iii.html#was-ist-ein-merge-konflikt",
@@ -3073,14 +3094,35 @@
     "href": "folien/bonus-github-iii.html#so-sieht-ein-konflikt-aus",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "So sieht ein Konflikt aus",
-    "text": "So sieht ein Konflikt aus\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; main\n- Quelle A (Statistik Kanton Zürich)\n=======\n- Quelle B (Bundesamt für Statistik)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden\n\nOben die Version aus main.\nUnten die Version aus deinem Branch.\nWir behalten beide Einträge und entfernen die Markierungen."
+    "text": "So sieht ein Konflikt aus\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; main\n- Quelle A (Statistik Kanton Zürich)\n=======\n- Quelle B (Bundesamt für Statistik)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden\n\nOben die Version aus main.\nUnten die Version aus deiner Branch (issue-3-methoden).\nGit hat drei Markierungen eingefügt: &lt;&lt;&lt;&lt;&lt;&lt;&lt;, ======= und &gt;&gt;&gt;&gt;&gt;&gt;&gt;."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#konflikt-auflösen-markierungen-entfernen",
+    "href": "folien/bonus-github-iii.html#konflikt-auflösen-markierungen-entfernen",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Konflikt auflösen: Markierungen entfernen",
+    "text": "Konflikt auflösen: Markierungen entfernen\nWir entscheiden uns und löschen die markierten Zeilen:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; main\n- Quelle A (Statistik Kanton Zürich)\n=======\n- Quelle B (Bundesamt für Statistik)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden\n\nWeg kommen die drei Markierungszeilen.\nUnd die Version, die wir nicht behalten wollen."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#konflikt-auflösen-was-bleibt",
+    "href": "folien/bonus-github-iii.html#konflikt-auflösen-was-bleibt",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Konflikt auflösen: Was bleibt",
+    "text": "Konflikt auflösen: Was bleibt\nWir behalten hier die Version aus issue-3-methoden:\n- Quelle B (Bundesamt für Statistik)\n\nÜbrig bleibt eine saubere Zeile, ohne Markierungen.\nDanach bericht.qmd speichern, committen und den Merge abschliessen.\n\n\n\n\n\n\n\nNote\n\n\nManchmal wollen wir beide Einträge behalten. Dann entfernen wir nur die drei Markierungszeilen und lassen Quelle A und Quelle B stehen."
   },
   {
     "objectID": "folien/bonus-github-iii.html#reflexion",
     "href": "folien/bonus-github-iii.html#reflexion",
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Reflexion",
-    "text": "Reflexion\n\nWas ist ein Merge-Konflikt?\nWann entsteht er?\nWie hilft ein Review dabei, Probleme früh zu erkennen?"
+    "text": "Reflexion\n\nWozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?\nWie hilft eine Review dabei, Probleme früh zu erkennen?\nWann kann ein Merge-Konflikt entstehen, und was bedeutet er?"
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#fragerunde",
+    "href": "folien/bonus-github-iii.html#fragerunde",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Fragerunde",
+    "text": "Fragerunde\nWas ist noch offen?\nZeit für eure Fragen (5 Minuten)."
   },
   {
     "objectID": "folien/bonus-github-iii.html#geschafft",
@@ -3088,6 +3130,13 @@
     "title": "Kollaboratives Arbeiten mit GitHub III",
     "section": "Geschafft",
     "text": "Geschafft\nIhr habt gemeinsam an einem Bericht gearbeitet, ohne euch gegenseitig zu überschreiben.\nGenau dafür sind Branches, Pull Requests und Reviews da."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#danke-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073756e203e7d7d",
+    "href": "folien/bonus-github-iii.html#danke-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073756e203e7d7d",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Danke! ",
+    "text": "Danke! \nFolien erstellt mit revealjs und Quarto: https://quarto.org/docs/presentations/revealjs/\nFolien als PDF auf GitHub\nAlle Materialien sind lizenziert unter Creative Commons Attribution Share Alike 4.0 International."
   },
   {
     "objectID": "folien/md-05-datumswerte.html#lernziele-für-diese-woche",
