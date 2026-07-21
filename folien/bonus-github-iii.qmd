@@ -118,6 +118,15 @@ countdown(minutes = 5)
 countdown(minutes = 10)
 ```
 
+## Wer reviewt wen? {.smaller}
+
+| PR-Autor:in (Abschnitt)                 | Reviewer:in           |
+|:----------------------------------------|:----------------------|
+| antonella-antonella (Unfälle pro Jahr)  | caro316               |
+| NOnina1 (Schwere nach Beteiligung)      | antonella-antonella   |
+| caro316 (Tödliche Unfälle)              | rainbow-train         |
+| rainbow-train (Fuss- und Velounfälle)   | NOnina1               |
+
 ## Schritt 5: Pull Request öffnen — Ich bin dran
 
 Ich zeige die Schritte einmal vor (5 Minuten).
