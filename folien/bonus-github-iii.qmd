@@ -1,0 +1,188 @@
+---
+title: "{{< var bonus-github-iii.titel >}}"
+subtitle: "{{< var course.long-titel >}}"
+author: "Lars Schöbitz"
+date: "2026-07-21"
+date-format: "MMM D, YYYY"
+format:
+  revealjs:
+    theme: slides.scss
+    transition: fade
+    slide-number: true
+    chalkboard: true
+footer: "[{{< fa link >}} {{< var course.site-short >}}]({{< var course.site >}})"
+editor: source
+execute:
+  freeze: auto
+editor_options:
+  chunk_output_type: console
+---
+
+```{r}
+#| include: false
+library(countdown)
+```
+
+## Lernziele
+
+1.  Ihr könnt einen Branch erstellen, darauf committen und einen Pull Request gegen `main` öffnen.
+2.  Ihr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.
+3.  Ihr könnt erklären, wann ein Merge-Konflikt entstehen kann und was er bedeutet.
+
+## Worum geht es heute?
+
+-   Ihr seid zu viert (ihr + ich) in einer GitHub-Organisation mit Schreibrecht auf ein Repository.
+-   Ihr arbeitet **gemeinsam** an einem Bericht (`bericht.qmd`).
+-   In 60 Minuten erlebt ihr Branching, Pull Requests, Review und Merge.
+
+## Der gemeinsame Bericht {.small}
+
+`bericht.qmd` besteht aus:
+
+-   einem Titelblock oben,
+-   vier Abschnitten, einer pro Person.
+
+::: callout-note
+Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und "Ihr seid dran" (ihr macht es selbst).
+:::
+
+## Spielregeln
+
+-   Vier Issues, eines pro Person, klar zugewiesen.
+-   Branch-Namen: `issue-N-<slug>` (z. B. `issue-3-methoden`). Ein Slug ist ein einzelnes Wort, das das Issue beschreibt.
+-   `main` ist geschützt: Merge nur über einen Pull Request mit **mindestens einem Review**.
+-   Jeder Pull Request wird von einer *anderen* Person reviewt, nie der eigene.
+-   Lars ist Admin und merged die Pull Requests.
+
+# Ablauf {background-color="#4C326A"}
+
+## Ablauf (60 Minuten) {.small}
+
+| Zeit       | Schritt                                                            |
+|:-----------|:------------------------------------------------------------------|
+| 0–10 Min   | Einstieg, Bericht zeigen, Issue gemeinsam suchen                  |
+| 10–20 Min  | Branch erstellen (ich zeige, dann ihr)                           |
+| 20–30 Min  | Quiet Mode: eigener Abschnitt (ihr seid dran)                    |
+| 30–40 Min  | Pull Request öffnen, Reviewer markieren (ich, dann ihr)          |
+| 40–50 Min  | Review mit mindestens einem Kommentar (ich, dann ihr)           |
+| 50–55 Min  | Live-Merge gemeinsam                                              |
+| 55–60 Min  | Fragerunde                                                        |
+
+## Schritt 1: Issue finden {.small}
+
+Das machen wir **gemeinsam**.
+
+::: task
+1.  Öffne das gemeinsame Repository auf GitHub.
+2.  Gehe zum Reiter [Issues]{.highlight-yellow}.
+3.  Finde das Issue, das **dir** zugewiesen ist.
+4.  Lies, welchen Abschnitt du schreiben sollst.
+:::
+
+## Schritt 2: Branch erstellen — Ich bin dran
+
+Ich zeige die Schritte einmal vor (5 Minuten).
+
+## Schritt 2: Branch erstellen — Ihr seid dran
+
+::: task
+1.  Erstelle einen neuen Branch mit dem Namen `issue-N-<slug>`.
+2.  `N` ist die Nummer deines Issues, `<slug>` ein einzelnes Wort, das das Issue beschreibt.
+3.  Wechsle auf deinen Branch (lokal oder auf posit.cloud).
+:::
+
+```{r}
+countdown(minutes = 5)
+```
+
+## Schritt 3: Quiet Mode — Ihr seid dran {.small}
+
+::: task
+1.  Schreibe deinen eigenen Abschnitt in `bericht.qmd`.
+2.  Committe deine Änderungen auf deinen Branch.
+:::
+
+Bitte in Stille arbeiten. Fragen sammeln wir danach.
+
+```{r}
+countdown(minutes = 10)
+```
+
+## Schritt 4: Pull Request öffnen — Ich bin dran
+
+Ich zeige die Schritte einmal vor (5 Minuten).
+
+## Schritt 4: Pull Request öffnen — Ihr seid dran
+
+::: task
+1.  Öffne einen Pull Request von deinem Branch gegen `main`.
+2.  Markiere eine **andere Person** als Reviewer.
+3.  Verlinke dein Issue im Pull Request (z. B. `Closes #N`).
+:::
+
+```{r}
+countdown(minutes = 5)
+```
+
+## Schritt 5: Review — Ich bin dran
+
+Ich zeige einmal, wie ein Review aussieht (5 Minuten).
+
+## Schritt 5: Review — Ihr seid dran
+
+::: task
+1.  Öffne den Pull Request, der dir zum Review zugewiesen wurde.
+2.  Lies die Änderungen im Reiter [Files changed]{.highlight-yellow}.
+3.  Hinterlasse mindestens **einen Kommentar**.
+4.  Gib das Review frei (Approve oder Kommentar).
+:::
+
+```{r}
+countdown(minutes = 5)
+```
+
+## Schritt 6: Live-Merge
+
+-   Ich merge die Pull Requests gemeinsam mit euch der Reihe nach.
+-   Wenn zwei Branches dieselbe Stelle geändert haben, **kann** dabei ein Merge-Konflikt entstehen.
+-   Falls das passiert, lösen wir ihn gemeinsam auf.
+
+# Merge-Konflikte {background-color="#4C326A"}
+
+## Was ist ein Merge-Konflikt?
+
+-   Zwei Branches ändern **dieselbe Stelle** einer Datei unterschiedlich.
+-   Git kann nicht selbst entscheiden, welche Version gewinnt.
+-   Git markiert die Stelle und bittet **uns** um die Entscheidung.
+
+## So sieht ein Konflikt aus {.small}
+
+```
+<<<<<<< main
+- Quelle A (Statistik Kanton Zürich)
+=======
+- Quelle B (Bundesamt für Statistik)
+>>>>>>> issue-3-methoden
+```
+
+-   Oben die Version aus `main`.
+-   Unten die Version aus deinem Branch.
+-   Wir behalten **beide** Einträge und entfernen die Markierungen.
+
+## Reflexion
+
+-   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
+-   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?
+
+## Fragerunde
+
+[Was ist noch offen?]{.highlight-yellow}
+
+Zeit für eure Fragen (5 Minuten).
+
+## Geschafft
+
+[Ihr habt gemeinsam an einem Bericht gearbeitet, ohne euch gegenseitig zu überschreiben.]{.highlight-yellow}
+
+Genau dafür sind Branches, Pull Requests und Reviews da.

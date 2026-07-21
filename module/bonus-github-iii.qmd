@@ -1,0 +1,91 @@
+---
+title: "Bonusmodul"
+subtitle: "{{< var bonus-github-iii.titel >}}"
+editor: source
+execute:
+  echo: false
+  warning: false
+bibliography: referenzen.bib
+editor_options:
+  chunk_output_type: console
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(here)
+
+# Read variables from _variables.yml
+vars <- yaml::read_yaml(here::here("_variables.yml"))
+
+# Extract date for this bonus module
+session_date <- vars$`bonus-github-iii`$date |> as.Date()
+
+# Set locale for German date formatting
+Sys.setlocale("LC_TIME", "de_DE.UTF-8")
+
+# Format date for display
+session_date_formatted <- format(session_date, "%A, %d. %B %Y")
+```
+
+Dieser 60-minütige Übungsblock findet am **`r session_date_formatted`** statt.
+Vier Teilnehmende arbeiten gemeinsam an einem Bericht in einem geteilten
+Repository und erleben dabei Branching, Pull Requests, Review und
+Merge-Konflikte in der Praxis.
+
+## Lernziele
+
+1.  Die Lernenden können eine Branch erstellen, darauf committen und einen
+    Pull Request gegen `main` öffnen.
+2.  Die Lernenden können einen Pull Request einer anderen Person reviewen (durchsehen) und
+    mit mindestens einem Kommentar kommentieren.
+3.  Die Lernenden können erklären, wann ein Merge-Konflikt entsteht, und einen
+    Konflikt in einer gemeinsam bearbeiteten Datei auflösen.
+
+## {{< fa display >}} Folien
+
+[Zeige Folien im Vollbildmodus an](../folien/bonus-github-iii.html) | [Download slides as PDF]({{< var course.github-org >}}website/raw/main/folien/bonus-github-iii.pdf)
+
+```{=html}
+<iframe class="slide-deck" src="../folien/bonus-github-iii.html" height="420" width="747" style="border: 1px solid #123233;"></iframe>
+```
+
+## {{< fa sitemap >}} Aufbau
+
+-   Alle vier Personen sind in einer GitHub-Organisation und haben Schreibrecht
+    auf ein gemeinsames Repository.
+-   Ein gemeinsamer Bericht (`bericht.qmd`): Titelblock oben, darunter vier
+    Abschnitte, einer pro Person.
+-   Vier Issues, eines pro Person, klar zugewiesen.
+-   Branch-Namenskonvention: `issue-N-<slug>`. Ein Slug ist ein einzelnes Wort, das das Issue beschreibt (z. B. `methoden`).
+-   Branch-Schutz auf `main`: ein Pull Request und mindestens ein Review sind
+    nötig.
+
+## {{< fa clock >}} Ablauf (60 Min)
+
+Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und
+"Ihr seid dran" (ihr macht es selbst mit einem Countdown).
+
+| Zeit       | Schritt                                                                                          |
+|:-----------|:-------------------------------------------------------------------------------------------------|
+| 0–10 Min   | Einstieg, Organisation und Bericht zeigen. Das eigene Issue suchen wir gemeinsam.                 |
+| 10–20 Min  | Branch erstellen (`issue-N-<slug>`): 5 Min ich zeige, 5 Min ihr seid dran                         |
+| 20–30 Min  | "Quiet Mode": eigenen Abschnitt im Bericht schreiben (10 Min, ihr seid dran)                      |
+| 30–40 Min  | Pull Request gegen `main` öffnen, eine andere Person als Reviewer markieren: 5 Min ich, 5 Min ihr |
+| 40–50 Min  | Review mit mindestens einem Kommentar: 5 Min ich, 5 Min ihr                                       |
+| 50–55 Min  | Live-Merge: ich merge die Pull Requests gemeinsam mit euch                                        |
+| 55–60 Min  | Abschliessende Fragerunde                                                                         |
+
+## {{< fa users >}} Rollen
+
+-   Lars ist Admin und merged die Pull Requests.
+-   Jeder Pull Request wird von einer *anderen* Person reviewt, nie der eigene.
+
+## {{< fa comments >}} Nachbereitung
+
+Reflexion in der Gruppe:
+
+-   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
+-   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?
