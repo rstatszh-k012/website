@@ -3888,5 +3888,12 @@
     "title": "rstatsZH - Data Science mit R",
     "section": "",
     "text": "I am working on a bonus module for 21 July 2026. It needs it’s own page under module. Kollaboratives Arbeiten mit GitHub III. It’s for k012/website- Read the issue first that’s been opend."
+  },
+  {
+    "objectID": "folien/bonus-github-iii.html#wer-reviewt-wen",
+    "href": "folien/bonus-github-iii.html#wer-reviewt-wen",
+    "title": "Kollaboratives Arbeiten mit GitHub III",
+    "section": "Wer reviewt wen?",
+    "text": "Wer reviewt wen?\n\n\n\nPR-Autor:in (Abschnitt)\nReviewer:in\n\n\n\n\nantonella-antonella (Unfälle pro Jahr)\ncaro316\n\n\nNOnina1 (Schwere nach Beteiligung)\nantonella-antonella\n\n\ncaro316 (Tödliche Unfälle)\nrainbow-train\n\n\nrainbow-train (Fuss- und Velounfälle)\nNOnina1"
   }
 ]
