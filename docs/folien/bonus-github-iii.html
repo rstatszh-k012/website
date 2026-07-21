@@ -33,6 +33,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-34491d3d027d91f4aa81e77ff9503b8f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -152,7 +218,7 @@ Lars Schöbitz
 <section id="lernziele" class="slide level2">
 <h2>Lernziele</h2>
 <ol type="1">
-<li>Ihr könnt einen Branch erstellen, darauf committen und einen Pull Request gegen <code>main</code> öffnen.</li>
+<li>Ihr könnt eine Branch erstellen, darauf committen und einen Pull Request gegen <code>main</code> öffnen.</li>
 <li>Ihr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.</li>
 <li>Ihr könnt erklären, wann ein Merge-Konflikt entsteht, und einen Konflikt in einer gemeinsam bearbeiteten Datei auflösen.</li>
 </ol>
@@ -162,7 +228,7 @@ Lars Schöbitz
 <ul>
 <li>Ihr seid zu viert (ihr + ich) in einer GitHub-Organisation mit Schreibrecht auf ein Repository.</li>
 <li>Ihr arbeitet <strong>gemeinsam</strong> an einem Bericht (<code>bericht.qmd</code>).</li>
-<li>In 60 Minuten erlebt ihr Branching, Pull Requests, Review und einen echten Merge-Konflikt.</li>
+<li>In 60 Minuten erlebt ihr Branching, Pull Requests, Review und Merge.</li>
 </ul>
 </section>
 <section id="der-gemeinsame-bericht" class="slide level2 small">
@@ -170,7 +236,6 @@ Lars Schöbitz
 <p><code>bericht.qmd</code> besteht aus:</p>
 <ul>
 <li>einem Titelblock oben,</li>
-<li>einer <strong>gemeinsamen Quellenliste</strong> (die bearbeiten heute alle),</li>
 <li>vier Abschnitten, einer pro Person.</li>
 </ul>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -182,7 +247,7 @@ Lars Schöbitz
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>Der Eintrag in die gemeinsame Quellenliste ist Absicht. Er erzeugt später den Merge-Konflikt.</p>
+<p>Wir wechseln bei jedem Schritt zwischen “Ich bin dran” (ich zeige es vor) und “Ihr seid dran” (ihr macht es selbst).</p>
 </div>
 </div>
 </div>
@@ -192,7 +257,7 @@ Lars Schöbitz
 <ul>
 <li>Vier Issues, eines pro Person, klar zugewiesen.</li>
 <li>Branch-Namen: <code>issue-N-&lt;slug&gt;</code> (z. B. <code>issue-3-methoden</code>). Ein Slug ist ein einzelnes Wort, das das Issue beschreibt.</li>
-<li><code>main</code> ist geschützt: Merge nur über einen Pull Request mit <strong>mindestens einem Review</strong>.</li>
+<li><code>main</code> ist geschützt: Merge nur über einen Pull Request mit <strong>mindestens einer Review</strong>.</li>
 <li>Jeder Pull Request wird von einer <em>anderen</em> Person reviewt, nie der eigene.</li>
 <li>Lars ist Admin und merged die Pull Requests.</li>
 </ul>
@@ -218,33 +283,38 @@ Lars Schöbitz
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">0–10 Min</td>
-<td style="text-align: left;">Einstieg, Bericht zeigen, eigenes Issue finden</td>
+<td style="text-align: left;">Einstieg, Bericht zeigen, Issue gemeinsam suchen</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">10–15 Min</td>
-<td style="text-align: left;">Branch erstellen</td>
+<td style="text-align: left;">10–20 Min</td>
+<td style="text-align: left;">Branch erstellen (ich zeige, dann ihr)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">15–35 Min</td>
-<td style="text-align: left;">Quiet Mode: eigener Abschnitt + Eintrag in die Quellenliste</td>
+<td style="text-align: left;">20–30 Min</td>
+<td style="text-align: left;">Quiet Mode: eigener Abschnitt (ihr seid dran)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">35–45 Min</td>
-<td style="text-align: left;">Pull Request öffnen, Reviewer markieren</td>
+<td style="text-align: left;">30–40 Min</td>
+<td style="text-align: left;">Pull Request öffnen, Reviewer markieren (ich, dann ihr)</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">45–52 Min</td>
-<td style="text-align: left;">Review mit mindestens einem Kommentar</td>
+<td style="text-align: left;">40–50 Min</td>
+<td style="text-align: left;">Review mit mindestens einem Kommentar (ich, dann ihr)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">52–60 Min</td>
-<td style="text-align: left;">Live-Merge und Merge-Konflikt gemeinsam auflösen</td>
+<td style="text-align: left;">50–55 Min</td>
+<td style="text-align: left;">Live-Merge gemeinsam</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55–60 Min</td>
+<td style="text-align: left;">Fragerunde</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="schritt-1-issue-finden" class="slide level2">
+<section id="schritt-1-issue-finden" class="slide level2 small">
 <h2>Schritt 1: Issue finden</h2>
+<p>Das machen wir <strong>gemeinsam</strong>.</p>
 <div class="task">
 <ol type="1">
 <li>Öffne das gemeinsame Repository auf GitHub.</li>
@@ -254,39 +324,45 @@ Lars Schöbitz
 </ol>
 </div>
 </section>
-<section id="schritt-2-branch-erstellen" class="slide level2">
-<h2>Schritt 2: Branch erstellen</h2>
+<section id="schritt-2-branch-erstellen-ich-bin-dran" class="slide level2">
+<h2>Schritt 2: Branch erstellen — Ich bin dran</h2>
+<p>Ich zeige die Schritte einmal vor (5 Minuten).</p>
+</section>
+<section id="schritt-2-branch-erstellen-ihr-seid-dran" class="slide level2">
+<h2>Schritt 2: Branch erstellen — Ihr seid dran</h2>
 <div class="task">
 <ol type="1">
-<li>Erstelle einen neuen Branch mit dem Namen <code>issue-N-&lt;slug&gt;</code>.</li>
+<li>Erstelle eine neue Branch mit dem Namen <code>issue-N-&lt;slug&gt;</code>.</li>
 <li><code>N</code> ist die Nummer deines Issues, <code>&lt;slug&gt;</code> ein einzelnes Wort, das das Issue beschreibt.</li>
-<li>Wechsle auf deinen Branch (lokal oder auf posit.cloud).</li>
+<li>Wechsle auf deine Branch (lokal oder auf posit.cloud).</li>
 </ol>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_b980cb5e" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_4bcfd02e" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
-<section id="schritt-3-quiet-mode" class="slide level2 small">
-<h2>Schritt 3: Quiet Mode</h2>
+<section id="schritt-3-quiet-mode-ihr-seid-dran" class="slide level2 small">
+<h2>Schritt 3: Quiet Mode — Ihr seid dran</h2>
 <div class="task">
 <ol type="1">
 <li>Schreibe deinen eigenen Abschnitt in <code>bericht.qmd</code>.</li>
-<li>Trage <strong>eine Quelle</strong> in die gemeinsame Quellenliste oben ein.</li>
-<li>Committe deine Änderungen auf deinen Branch.</li>
+<li>Committe deine Änderungen auf deine Branch.</li>
 </ol>
 </div>
-<p>Bitte in Stille arbeiten. Fragen sammeln wir danach.</p>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_83e57311" minutes="20" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_ed94cd1a" minutes="10" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
-<section id="schritt-4-pull-request-öffnen" class="slide level2">
-<h2>Schritt 4: Pull Request öffnen</h2>
+<section id="schritt-4-pull-request-öffnen-ich-bin-dran" class="slide level2">
+<h2>Schritt 4: Pull Request öffnen — Ich bin dran</h2>
+<p>Ich zeige die Schritte einmal vor (5 Minuten).</p>
+</section>
+<section id="schritt-4-pull-request-öffnen-ihr-seid-dran" class="slide level2">
+<h2>Schritt 4: Pull Request öffnen — Ihr seid dran</h2>
 <div class="task">
 <ol type="1">
 <li>Öffne einen Pull Request von deinem Branch gegen <code>main</code>.</li>
@@ -296,33 +372,36 @@ Lars Schöbitz
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_e3bbc766" minutes="10" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_b668d19a" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
-<section id="schritt-5-review" class="slide level2">
-<h2>Schritt 5: Review</h2>
+<section id="schritt-5-review-ich-bin-dran" class="slide level2">
+<h2>Schritt 5: Review — Ich bin dran</h2>
+<p>Ich zeige einmal, wie eine Review aussieht (5 Minuten).</p>
+</section>
+<section id="schritt-5-review-ihr-seid-dran" class="slide level2">
+<h2>Schritt 5: Review — Ihr seid dran</h2>
 <div class="task">
 <ol type="1">
-<li>Öffne den Pull Request, der dir zum Review zugewiesen wurde.</li>
+<li>Öffne den Pull Request, der dir zur Review zugewiesen wurde.</li>
 <li>Lies die Änderungen im Reiter <span class="highlight-yellow">Files changed</span>.</li>
 <li>Hinterlasse mindestens <strong>einen Kommentar</strong>.</li>
-<li>Gib das Review frei (Approve oder Kommentar).</li>
+<li>Gib die Review frei (Approve oder Kommentar).</li>
 </ol>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<countdown-timer class="countdown" id="timer_eadf9640" minutes="7" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
+<countdown-timer class="countdown" id="timer_1f1ccc67" minutes="5" seconds="0" update-every="1" tabindex="0" style="right:0;bottom:0;"></countdown-timer>
 </div>
 </div>
 </section>
 <section id="schritt-6-live-merge" class="slide level2">
 <h2>Schritt 6: Live-Merge</h2>
 <ul>
-<li>Lars merged die Pull Requests der Reihe nach.</li>
-<li>Der <strong>erste</strong> Pull Request merged sauber.</li>
-<li>Ab dem <strong>zweiten</strong> entsteht ein Merge-Konflikt in der gemeinsamen Quellenliste.</li>
-<li>Diesen Konflikt lösen wir gemeinsam auf.</li>
+<li>Ich merge die Pull Requests gemeinsam mit euch der Reihe nach.</li>
+<li>Wenn zwei Branches dieselbe Stelle geändert haben, <strong>kann</strong> dabei ein Merge-Konflikt entstehen.</li>
+<li>Falls das passiert, lösen wir ihn gemeinsam auf.</li>
 </ul>
 </section></section>
 <section>
@@ -340,29 +419,80 @@ Lars Schöbitz
 </section>
 <section id="so-sieht-ein-konflikt-aus" class="slide level2 small">
 <h2>So sieht ein Konflikt aus</h2>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; main
-- Quelle A (Statistik Kanton Zürich)
-=======
-- Quelle B (Bundesamt für Statistik)
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; main</span>
+<span id="cb1-2"><a></a>- Quelle A (Statistik Kanton Zürich)</span>
+<span id="cb1-3"><a></a>=======</span>
+<span id="cb1-4"><a></a>- Quelle B (Bundesamt für Statistik)</span>
+<span id="cb1-5"><a></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Oben die Version aus <code>main</code>.</li>
-<li>Unten die Version aus deinem Branch.</li>
-<li>Wir behalten <strong>beide</strong> Einträge und entfernen die Markierungen.</li>
+<li>Unten die Version aus deiner Branch (<code>issue-3-methoden</code>).</li>
+<li>Git hat drei Markierungen eingefügt: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> und <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</li>
 </ul>
+</section>
+<section id="konflikt-auflösen-markierungen-entfernen" class="slide level2 small">
+<h2>Konflikt auflösen: Markierungen entfernen</h2>
+<p>Wir entscheiden uns und <strong>löschen</strong> die markierten Zeilen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-code-line-numbers="1,3,5"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a></a>&lt;&lt;&lt;&lt;&lt;&lt;&lt; main</span>
+<span id="cb2-2"><a></a>- Quelle A (Statistik Kanton Zürich)</span>
+<span id="cb2-3"><a></a>=======</span>
+<span id="cb2-4"><a></a>- Quelle B (Bundesamt für Statistik)</span>
+<span id="cb2-5"><a></a>&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue-3-methoden</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><span class="highlight-pink">Weg</span> kommen die drei Markierungszeilen.</li>
+<li>Und die Version, die wir <strong>nicht</strong> behalten wollen.</li>
+</ul>
+</section>
+<section id="konflikt-auflösen-was-bleibt" class="slide level2 small">
+<h2>Konflikt auflösen: Was bleibt</h2>
+<p>Wir behalten hier die Version aus <code>issue-3-methoden</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb3-1"><a></a>- Quelle B (Bundesamt für Statistik)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Übrig bleibt eine saubere Zeile, ohne Markierungen.</li>
+<li>Danach <code>bericht.qmd</code> speichern, committen und den Merge abschliessen.</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Manchmal wollen wir <strong>beide</strong> Einträge behalten. Dann entfernen wir nur die drei Markierungszeilen und lassen Quelle A und Quelle B stehen.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="reflexion" class="slide level2">
 <h2>Reflexion</h2>
 <ul>
-<li>Was ist ein Merge-Konflikt?</li>
-<li>Wann entsteht er?</li>
-<li>Wie hilft ein Review dabei, Probleme früh zu erkennen?</li>
+<li>Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?</li>
+<li>Wie hilft eine Review dabei, Probleme früh zu erkennen?</li>
+<li>Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?</li>
 </ul>
+</section>
+<section id="fragerunde" class="slide level2">
+<h2>Fragerunde</h2>
+<p><span class="highlight-yellow">Was ist noch offen?</span></p>
+<p>Zeit für eure Fragen (5 Minuten).</p>
 </section>
 <section id="geschafft" class="slide level2">
 <h2>Geschafft</h2>
 <p><span class="highlight-yellow">Ihr habt gemeinsam an einem Bericht gearbeitet, ohne euch gegenseitig zu überschreiben.</span></p>
 <p>Genau dafür sind Branches, Pull Requests und Reviews da.</p>
+</section></section>
+<section>
+<section id="danke" class="title-slide slide level1 center" data-background-color="#4C326A">
+<h1>Danke</h1>
+
+</section>
+<section id="danke-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2066612073756e203e7d7d" class="slide level2">
+<h2>Danke! <i class="fa-solid fa-sun" aria-label="sun"></i></h2>
+<p>Folien erstellt mit revealjs und Quarto: https://quarto.org/docs/presentations/revealjs/</p>
+<p>Folien als <a href="https://github.com/rstatszh-k012/website/raw/main/folien/bonus-github-iii.pdf">PDF auf GitHub</a></p>
+<p>Alle Materialien sind lizenziert unter <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share Alike 4.0 International</a>.</p>
 
 
 </section></section>

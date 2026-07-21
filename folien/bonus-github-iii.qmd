@@ -25,9 +25,9 @@ library(countdown)
 
 ## Lernziele
 
-1.  Ihr könnt einen Branch erstellen, darauf committen und einen Pull Request gegen `main` öffnen.
+1.  Ihr könnt eine Branch erstellen, darauf committen und einen Pull Request gegen `main` öffnen.
 2.  Ihr könnt einen Pull Request einer anderen Person reviewen (durchsehen) und mit mindestens einem Kommentar kommentieren.
-3.  Ihr könnt erklären, wann ein Merge-Konflikt entstehen kann und was er bedeutet.
+3.  Ihr könnt erklären, wann ein Merge-Konflikt entsteht, und einen Konflikt in einer gemeinsam bearbeiteten Datei auflösen.
 
 ## Worum geht es heute?
 
@@ -50,7 +50,7 @@ Wir wechseln bei jedem Schritt zwischen "Ich bin dran" (ich zeige es vor) und "I
 
 -   Vier Issues, eines pro Person, klar zugewiesen.
 -   Branch-Namen: `issue-N-<slug>` (z. B. `issue-3-methoden`). Ein Slug ist ein einzelnes Wort, das das Issue beschreibt.
--   `main` ist geschützt: Merge nur über einen Pull Request mit **mindestens einem Review**.
+-   `main` ist geschützt: Merge nur über einen Pull Request mit **mindestens einer Review**.
 -   Jeder Pull Request wird von einer *anderen* Person reviewt, nie der eigene.
 -   Lars ist Admin und merged die Pull Requests.
 
@@ -86,9 +86,9 @@ Ich zeige die Schritte einmal vor (5 Minuten).
 ## Schritt 2: Branch erstellen — Ihr seid dran
 
 ::: task
-1.  Erstelle einen neuen Branch mit dem Namen `issue-N-<slug>`.
+1.  Erstelle eine neue Branch mit dem Namen `issue-N-<slug>`.
 2.  `N` ist die Nummer deines Issues, `<slug>` ein einzelnes Wort, das das Issue beschreibt.
-3.  Wechsle auf deinen Branch (lokal oder auf posit.cloud).
+3.  Wechsle auf deine Branch (lokal oder auf posit.cloud).
 :::
 
 ```{r}
@@ -99,10 +99,8 @@ countdown(minutes = 5)
 
 ::: task
 1.  Schreibe deinen eigenen Abschnitt in `bericht.qmd`.
-2.  Committe deine Änderungen auf deinen Branch.
+2.  Committe deine Änderungen auf deine Branch.
 :::
-
-Bitte in Stille arbeiten. Fragen sammeln wir danach.
 
 ```{r}
 countdown(minutes = 10)
@@ -126,15 +124,15 @@ countdown(minutes = 5)
 
 ## Schritt 5: Review — Ich bin dran
 
-Ich zeige einmal, wie ein Review aussieht (5 Minuten).
+Ich zeige einmal, wie eine Review aussieht (5 Minuten).
 
 ## Schritt 5: Review — Ihr seid dran
 
 ::: task
-1.  Öffne den Pull Request, der dir zum Review zugewiesen wurde.
+1.  Öffne den Pull Request, der dir zur Review zugewiesen wurde.
 2.  Lies die Änderungen im Reiter [Files changed]{.highlight-yellow}.
 3.  Hinterlasse mindestens **einen Kommentar**.
-4.  Gib das Review frei (Approve oder Kommentar).
+4.  Gib die Review frei (Approve oder Kommentar).
 :::
 
 ```{r}
@@ -157,7 +155,7 @@ countdown(minutes = 5)
 
 ## So sieht ein Konflikt aus {.small}
 
-```
+``` {.default}
 <<<<<<< main
 - Quelle A (Statistik Kanton Zürich)
 =======
@@ -166,13 +164,43 @@ countdown(minutes = 5)
 ```
 
 -   Oben die Version aus `main`.
--   Unten die Version aus deinem Branch.
--   Wir behalten **beide** Einträge und entfernen die Markierungen.
+-   Unten die Version aus deiner Branch (`issue-3-methoden`).
+-   Git hat drei Markierungen eingefügt: `<<<<<<<`, `=======` und `>>>>>>>`.
+
+## Konflikt auflösen: Markierungen entfernen {.small}
+
+Wir entscheiden uns und **löschen** die markierten Zeilen:
+
+``` {.default code-line-numbers="1,3,5"}
+<<<<<<< main
+- Quelle A (Statistik Kanton Zürich)
+=======
+- Quelle B (Bundesamt für Statistik)
+>>>>>>> issue-3-methoden
+```
+
+-   [Weg]{.highlight-pink} kommen die drei Markierungszeilen.
+-   Und die Version, die wir **nicht** behalten wollen.
+
+## Konflikt auflösen: Was bleibt {.small}
+
+Wir behalten hier die Version aus `issue-3-methoden`:
+
+``` {.default}
+- Quelle B (Bundesamt für Statistik)
+```
+
+-   Übrig bleibt eine saubere Zeile, ohne Markierungen.
+-   Danach `bericht.qmd` speichern, committen und den Merge abschliessen.
+
+::: callout-note
+Manchmal wollen wir **beide** Einträge behalten. Dann entfernen wir nur die drei Markierungszeilen und lassen Quelle A und Quelle B stehen.
+:::
 
 ## Reflexion
 
 -   Wozu dienen Branches, wenn mehrere Personen am selben Repository arbeiten?
--   Wie hilft ein Review dabei, Probleme früh zu erkennen?
+-   Wie hilft eine Review dabei, Probleme früh zu erkennen?
 -   Wann kann ein Merge-Konflikt entstehen, und was bedeutet er?
 
 ## Fragerunde
@@ -186,3 +214,13 @@ Zeit für eure Fragen (5 Minuten).
 [Ihr habt gemeinsam an einem Bericht gearbeitet, ohne euch gegenseitig zu überschreiben.]{.highlight-yellow}
 
 Genau dafür sind Branches, Pull Requests und Reviews da.
+
+# Danke {background-color="#4C326A"}
+
+## Danke! {{< fa sun >}}
+
+Folien erstellt mit revealjs und Quarto: https://quarto.org/docs/presentations/revealjs/
+
+Folien als [PDF auf GitHub]({{< var course.github-org >}}website/raw/main/folien/bonus-github-iii.pdf)
+
+Alle Materialien sind lizenziert unter [Creative Commons Attribution Share Alike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
